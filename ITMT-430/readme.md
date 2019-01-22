@@ -8,7 +8,7 @@
 
 I was born and raised in Chicago my whole life.
 
-My mom, who is (probably) australian, grew up in Saudi Arabia, and my dad grew up in the US.
+My mom, who was (probably) australian, grew up in Saudi Arabia, and my dad grew up in the US.
 
 ## What is your IT interest/specialty?
 
