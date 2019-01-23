@@ -24,7 +24,7 @@ I moderately enjoy creating GUIs. I like me some key shortcuts, though. My
 philosophy is, "you shouldn't need a mouse to use my program".
 
 I don't like programming web/mobile interfaces as much, but [I can and
-have](https://henryfbp.me).
+have](http://henryfbp.me).
 
 I also like to repair computers, phones, and I like building computers too.
 
