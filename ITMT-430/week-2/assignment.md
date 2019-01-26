@@ -1,6 +1,6 @@
 Choose 2 case studies from http://highscalability.com and write a review of the company's architecture based on these issues:  
 
-Post your topics on the discussion board under the Case Studies forum - both of your case study choices have to be unique from everyone else. Those who choose first will get the ones they want.   There are over 200+ case studies there will be plenty of options.
+There are over 200+ case studies there will be plenty of options.
 
 You can find them at http://highscalability.com/blog/category/example  or look on the highscalability website on the lower right hand side for the All Time Favorites header to find some of the more popular services.   Its best to find a company that you use or support.
 
