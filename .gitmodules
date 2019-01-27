@@ -1,0 +1,3 @@
+[submodule "ITMT-430/week-2/packer-vagrant-build-scripts"]
+	path = ITMT-430/week-2/packer-vagrant-build-scripts
+	url = https://github.com/jhajek/packer-vagrant-build-scripts/
