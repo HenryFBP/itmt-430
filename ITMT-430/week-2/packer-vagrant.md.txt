@@ -1,0 +1,87 @@
+ubuntu-vanilla-18041-server output will be in this color.
+
+==> ubuntu-vanilla-18041-server: Retrieving ISO
+    ubuntu-vanilla-18041-server: Found already downloaded, initial checksum matched, no download needed: http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.1-server-amd64.iso
+==> ubuntu-vanilla-18041-server: Starting HTTP server on port 9001
+==> ubuntu-vanilla-18041-server: Creating virtual machine...
+==> ubuntu-vanilla-18041-server: Creating hard drive...
+==> ubuntu-vanilla-18041-server: Creating forwarded port mapping for communicator (SSH, WinRM, etc) (host port 3110)
+==> ubuntu-vanilla-18041-server: Executing custom VBoxManage commands...
+    ubuntu-vanilla-18041-server: Executing: modifyvm ubuntu-vanilla-18041-server --memory 2048
+==> ubuntu-vanilla-18041-server: Starting the virtual machine...
+==> ubuntu-vanilla-18041-server: Waiting 10s for boot...
+==> ubuntu-vanilla-18041-server: Typing the boot command...
+==> ubuntu-vanilla-18041-server: Using ssh communicator to connect: 127.0.0.1
+==> ubuntu-vanilla-18041-server: Waiting for SSH to become available...
+==> ubuntu-vanilla-18041-server: Connected to SSH!
+==> ubuntu-vanilla-18041-server: Uploading VirtualBox version info (5.2.22)
+==> ubuntu-vanilla-18041-server: Provisioning with shell script: ../scripts/post_install_vagrant.sh
+    ubuntu-vanilla-18041-server: [sudo] password for vagrant:
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server: # http://superuser.com/questions/196848/how-do-i-create-an-administrator-user-on-ubuntu
+    ubuntu-vanilla-18041-server: # http://unix.stackexchange.com/questions/1416/redirecting-stdout-to-a-file-you-dont-have-write-permission-on
+    ubuntu-vanilla-18041-server: # This line assumes the user you created in the preseed directory is vagrant
+    ubuntu-vanilla-18041-server: echo "%admin  ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/init-users
+    ubuntu-vanilla-18041-server: %admin  ALL=NOPASSWD: ALL
+    ubuntu-vanilla-18041-server: sudo groupadd admin
+    ubuntu-vanilla-18041-server: sudo usermod -a -G admin vagrant
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server: # Installing vagrant keys
+    ubuntu-vanilla-18041-server: wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub'
+    ubuntu-vanilla-18041-server: --2019-01-27 18:12:30--  https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
+    ubuntu-vanilla-18041-server: Resolving raw.github.com (raw.github.com)... 151.101.184.133
+    ubuntu-vanilla-18041-server: Connecting to raw.github.com (raw.github.com)|151.101.184.133|:443... connected.
+    ubuntu-vanilla-18041-server: HTTP request sent, awaiting response... 301 Moved Permanently
+    ubuntu-vanilla-18041-server: Location: https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub [following]
+    ubuntu-vanilla-18041-server: --2019-01-27 18:12:30--  https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
+    ubuntu-vanilla-18041-server: Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.184.133
+    ubuntu-vanilla-18041-server: Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.184.133|:443... connected.
+    ubuntu-vanilla-18041-server: HTTP request sent, awaiting response... 200 OK
+    ubuntu-vanilla-18041-server: Length: 409 [text/plain]
+    ubuntu-vanilla-18041-server: Saving to: ‘vagrant.pub’
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server:      0K                                                       100%  104M=0s
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server: 2019-01-27 18:12:30 (104 MB/s) - ‘vagrant.pub’ saved [409/409]
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server: sudo mkdir -p /home/vagrant/.ssh
+    ubuntu-vanilla-18041-server: sudo chown -R vagrant:vagrant /home/vagrant/.ssh
+    ubuntu-vanilla-18041-server: cat ./vagrant.pub >> /home/vagrant/.ssh/authorized_keys
+    ubuntu-vanilla-18041-server: sudo chown -R vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+    ubuntu-vanilla-18041-server: echo "All Done!"
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server: #http://www.fail2ban.org/wiki/index.php/MANUAL_0_8#Jails
+    ubuntu-vanilla-18041-server: sudo sed -i "s/bantime = 600/bantime = -1/g" /etc/fail2ban/jail.conf
+    ubuntu-vanilla-18041-server: All Done!
+    ubuntu-vanilla-18041-server: sudo systemctl enable fail2ban
+    ubuntu-vanilla-18041-server: Synchronizing state of fail2ban.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    ubuntu-vanilla-18041-server: Executing: /lib/systemd/systemd-sysv-install enable fail2ban
+    ubuntu-vanilla-18041-server: sudo service fail2ban restart
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server: ##################################################
+    ubuntu-vanilla-18041-server: # Add User customizations below here
+    ubuntu-vanilla-18041-server: ##################################################
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server:
+    ubuntu-vanilla-18041-server:
+==> ubuntu-vanilla-18041-server: Gracefully halting virtual machine...
+    ubuntu-vanilla-18041-server: [sudo] password for vagrant:
+==> ubuntu-vanilla-18041-server: Preparing to export machine...
+    ubuntu-vanilla-18041-server: Deleting forwarded port mapping for the communicator (SSH, WinRM, etc) (host port 3110)
+==> ubuntu-vanilla-18041-server: Exporting virtual machine...
+    ubuntu-vanilla-18041-server: Executing: export ubuntu-vanilla-18041-server --output output-ubuntu-vanilla-18041-server\ubuntu-vanilla-18041-server.ovf
+==> ubuntu-vanilla-18041-server: Deregistering and deleting VM...
+==> ubuntu-vanilla-18041-server: Running post-processor: vagrant
+==> ubuntu-vanilla-18041-server (vagrant): Creating Vagrant box for 'virtualbox' provider
+    ubuntu-vanilla-18041-server (vagrant): Copying from artifact: output-ubuntu-vanilla-18041-server\ubuntu-vanilla-18041-server-disk001.vmdk
+    ubuntu-vanilla-18041-server (vagrant): Copying from artifact: output-ubuntu-vanilla-18041-server\ubuntu-vanilla-18041-server.ovf
+    ubuntu-vanilla-18041-server (vagrant): Renaming the OVF to box.ovf...
+    ubuntu-vanilla-18041-server (vagrant): Compressing: Vagrantfile
+    ubuntu-vanilla-18041-server (vagrant): Compressing: box.ovf
+    ubuntu-vanilla-18041-server (vagrant): Compressing: metadata.json
+    ubuntu-vanilla-18041-server (vagrant): Compressing: ubuntu-vanilla-18041-server-disk001.vmdk
+Build 'ubuntu-vanilla-18041-server' finished.
+
+==> Builds finished. The artifacts of successful builds are:
+--> ubuntu-vanilla-18041-server: 'virtualbox' provider box: ../build/ubuntu-vanilla-18041-server-virtualbox-1548633818.box
