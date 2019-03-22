@@ -95,6 +95,9 @@ https://github.com/illinoistech-itm/2019-team-07f/commit/0f937356e5d2bf13c84a092
 
 https://github.com/illinoistech-itm/2019-team-07f/commit/3df795d70e8ac77d8a11a477090ca7e1fe3f8d83
 
+![Proof that I documented my work about the broken CSS in
+Trello.](fix-broken-css-proof.PNG)
+
 ### Re-do and simplify much of HTML/CSS
 
 I took a 500-line CSS file down to about 20 lines. I also fixed many, many, many
@@ -104,11 +107,17 @@ https://github.com/illinoistech-itm/2019-team-07f/commit/856d67a1c86793e760db668
 
 https://github.com/illinoistech-itm/2019-team-07f/commit/53ff14f60d7e1b380d0c043d09458db984f81c90
 
+![Proof that I documented my work about re-doing the messy HTML+CSS in
+Trello.](redo-html-proof.PNG)
+
 ## Add test users to Vagrant provisioning step
 
 https://github.com/illinoistech-itm/2019-team-07f/commit/d7b4c5e471637dfbec0d1dbe954020ae7439f898
 
 ## Use SSH keys to clone git repo
+
+![Proof that I documented my work about the GitHub deploy keys in
+Trello.](use-github-ssh-keys-proof.PNG)
 
 https://github.com/illinoistech-itm/2019-team-07f/commit/bb55dfc6dd4f7d94f3f7206bbba84d104d65c9a9
 
@@ -117,6 +126,9 @@ https://github.com/illinoistech-itm/2019-team-07f/commit/e031995b25cf7d94ed6eea2
 https://github.com/illinoistech-itm/2019-team-07f/commit/6d8cfbc79dedb0d9e029c9a7724e80a0e6697584
 
 ## Fully separate MySQL box from Web box
+
+![Proof that I documented my work about separating vagrant boxes in
+Trello.](separate-vagrant-boxes-proof.PNG)
 
 https://github.com/illinoistech-itm/2019-team-07f/commit/b66ca06421a725ce0bbbb0c8fc206e63c412cdb0
 
